@@ -22,6 +22,9 @@ export class ComtentComponent implements OnInit {
         }else if (event.url.startsWith('/stock') ) {
           this.title = '这是股票信息管理';
           this.desc = '股票信息增删改查';
+        }else if (event.url.startsWith('/chart') ) {
+          this.title = '图表信息';
+          this.desc = '图表管理';
         }
       });
   }
