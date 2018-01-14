@@ -11,7 +11,7 @@ import {StockManageComponent} from './stock/stock-manage/stock-manage.component'
 import {StarsComponent} from './stars/stars.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {RouterModule, Routes} from '@angular/router';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {StockFormComponent} from './stock/stock-form/stock-form.component';
 import {ChartComponent} from './chart/chart.component';
@@ -39,13 +39,14 @@ const routeConfig: Routes = [
     DashboardComponent,
     StockFormComponent,
     ChartComponent,
-    BindComponent
+    BindComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routeConfig)
+    RouterModule.forRoot(routeConfig),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
