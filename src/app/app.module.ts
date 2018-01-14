@@ -15,13 +15,15 @@ import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 import {StockFormComponent} from './stock/stock-form/stock-form.component';
 import {ChartComponent} from './chart/chart.component';
+import {BindComponent} from './bind/bind.component';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/dashBoard', pathMatch: 'full'},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'stock', component: StockManageComponent},
   {path: 'stock/:id', component: StockFormComponent},
-  {path: 'chart', component: ChartComponent}
+  {path: 'chart', component: ChartComponent},
+  {path: 'bind', component: BindComponent}
 ];
 
 @NgModule({
@@ -36,7 +38,8 @@ const routeConfig: Routes = [
     StarsComponent,
     DashboardComponent,
     StockFormComponent,
-    ChartComponent
+    ChartComponent,
+    BindComponent
   ],
   imports: [
     BrowserModule,
