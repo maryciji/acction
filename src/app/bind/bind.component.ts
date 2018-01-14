@@ -11,7 +11,9 @@ import 'rxjs/Rx';
 export class BindComponent implements OnInit {
 
   searchInput: FormControl = new FormControl();
-
+  data: Date = new Date();
+  num: number = 6;
+  
   constructor() {
     this.searchInput.valueChanges
       .debounceTime(500)

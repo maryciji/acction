@@ -16,6 +16,7 @@ import {HttpModule} from '@angular/http';
 import {StockFormComponent} from './stock/stock-form/stock-form.component';
 import {ChartComponent} from './chart/chart.component';
 import {BindComponent} from './bind/bind.component';
+import { MultiplePipe } from './pipe/multiple.pipe';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/dashBoard', pathMatch: 'full'},
@@ -40,6 +41,7 @@ const routeConfig: Routes = [
     StockFormComponent,
     ChartComponent,
     BindComponent,
+    MultiplePipe,
   ],
   imports: [
     BrowserModule,
