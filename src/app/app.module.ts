@@ -16,7 +16,8 @@ import {HttpModule} from '@angular/http';
 import {StockFormComponent} from './stock/stock-form/stock-form.component';
 import {ChartComponent} from './chart/chart.component';
 import {BindComponent} from './bind/bind.component';
-import { MultiplePipe } from './pipe/multiple.pipe';
+import {MultiplePipe} from './pipe/multiple.pipe';
+import {FormComponent} from './form/form.component';
 
 const routeConfig: Routes = [
   {path: '', redirectTo: '/dashBoard', pathMatch: 'full'},
@@ -24,7 +25,8 @@ const routeConfig: Routes = [
   {path: 'stock', component: StockManageComponent},
   {path: 'stock/:id', component: StockFormComponent},
   {path: 'chart', component: ChartComponent},
-  {path: 'bind', component: BindComponent}
+  {path: 'bind', component: BindComponent},
+  {path: 'form', component: FormComponent}
 ];
 
 @NgModule({
@@ -42,13 +44,15 @@ const routeConfig: Routes = [
     ChartComponent,
     BindComponent,
     MultiplePipe,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routeConfig),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

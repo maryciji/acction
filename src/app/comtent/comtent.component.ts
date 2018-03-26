@@ -25,6 +25,9 @@ export class ComtentComponent implements OnInit {
         }else if (event.url.startsWith('/chart') ) {
           this.title = '图表信息';
           this.desc = '图表管理';
+        }else if (event.url.startsWith('/form') ) {
+          this.title = '表单信息';
+          this.desc = '表单管理';
         }
       });
   }
